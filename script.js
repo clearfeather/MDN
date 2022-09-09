@@ -9,9 +9,11 @@ const countdown = () => {
         output.append(para);
         if (i === 0) {
             para.textContent = `BLASTOFF!`;
-        } else {
+        } else if (i <= 9) {
             // create new paragraph, append to div
-            para.textContent = `Counting: ${i}`;
+            para.textContent = i;
+        } else {
+            para.textContent = `Countdown: ${i}`;
         }
     }
 }
