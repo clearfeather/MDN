@@ -10,11 +10,16 @@ refused.textContent = 'Refuse: ';
 // loop starts here
 for (let person of people) {
     if (person === 'Phil' || person === 'Lola') {
+        // Display and concat people to refuse
         refused.textContent += `${person}, `;
     } else {
+        // Display and concat people to admin
         admitted.textContent += `${person}, `;
     }
 }
 
-// refused.textContent += ;
-// admitted.textContent += ;
+// Update , to . at end of each textContent
+refused.textContent = 
+    refused.textContent.slice(0,refused.textContent.length-2) + '.';
+admitted.textContent = 
+    admitted.textContent.slice(0,admitted.textContent.length-2) + '.';
